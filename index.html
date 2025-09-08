@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mervin ❤️ Niti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ffd6e8, #ffe9f3);
+      color: #333;
+      overflow-x: hidden;
+    }
 
+    /* Opening Scene */
+    .intro {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffdde1);
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .intro h1 {
+      font-size: 3em;
+      color: #e91e63;
+      opacity: 0;
+      animation: fadeUp 3s forwards;
+      animation-delay: 1s;
+    }
+
+    /* Milestone Section */
+    .milestone {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #ec407a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8em;
+      margin: 0 auto 30px;
+      animation: pulse 2s infinite;
+    }
+
+    .milestone p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    /* Memory Cloud Section */
+    .memories {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .memory {
+      background: #fff;
+      border-radius: 30px;
+      padding: 15px 25px;
+      font-size: 1em;
+      color: #444;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: floatUp 5s infinite ease-in-out;
+    }
+
+    /* Floating Images */
+    .floating-images {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      overflow: hidden;
+      margin: 50px 0;
+    }
+
+    .floating-images img {
+      position: absolute;
+      width: 120px;
+      border-radius: 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    }
+
+    .floating-images img.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);}
+      50% { transform: scale(1.1);}
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0);}
+      50% { transform: translateY(-10px);}
+      100% { transform: translateY(0);}
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background: #ec407a;
+      color: white;
+      font-size: 1.1em;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Opening Scene -->
+  <div class="intro">
+    <h1>Mervin & Niti 💕</h1>
+  </div>
+
+  <!-- Milestone Section -->
+  <div class="milestone">
+    <div class="circle">5 Months</div>
+    <p>Five months of laughter, love, and countless memories ✨</p>
+  </div>
+
+  <!-- Memory Cloud -->
+  <div class="memories">
+    <h2>🌸 Our Cherishable Moments 🌸</h2>
+    <div class="cloud">
+      <div class="memory">💌 First Texts</div>
+      <div class="memory">😊 First Meet</div>
+      <div class="memory">💞 First Date</div>
+      <div class="memory">🌙 Late Night Talks</div>
+      <div class="memory">🎶 Our Songs</div>
+      <div class="memory">🍦 Ice Cream Nights</div>
+      <div class="memory">📸 Cute Selfies</div>
+      <div class="memory">🎉 5 Months Strong</div>
+    </div>
+  </div>
+
+  <!-- Floating Images Section -->
+  <div class="floating-images">
+    <img src="gf1.jpg" style="top: 100px; left: 10%;" alt="GF Image 1">
+    <img src="gf2.jpg" style="top: 300px; left: 30%;" alt="GF Image 2">
+    <img src="gf3.jpg" style="top: 200px; left: 60%;" alt="GF Image 3">
+    <img src="gf4.jpg" style="top: 400px; left: 80%;" alt="GF Image 4">
+  </div>
+
+  <footer>
+    Forever Yours 💖 — Mervin & Niti
+  </footer>
+
+  <script>
+    // Scroll-triggered floating images
+    const images = document.querySelectorAll('.floating-images img');
+
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      images.forEach(img => {
+        const imgTop = img.getBoundingClientRect().top;
+
+        if(imgTop < triggerBottom){
+          img.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
