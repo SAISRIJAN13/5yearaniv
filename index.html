@@ -3,128 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mervin ❤️ Nitis - 5 Months</title>
+  <title>Mervin ❤️ Niti</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      background: linear-gradient(135deg, #ffd6e8, #ff9ebb);
       margin: 0;
-      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ffd6e8, #ffe9f3);
+      color: #333;
       overflow-x: hidden;
     }
 
-    h1 {
-      font-size: 2.8em;
+    /* Opening Scene */
+    .intro {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffdde1);
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .intro h1 {
+      font-size: 3em;
       color: #e91e63;
-      margin-top: 60px;
-      animation: heartbeat 1.5s infinite;
+      opacity: 0;
+      animation: fadeUp 3s forwards;
+      animation-delay: 1s;
     }
 
-    h2 {
-      color: #ad1457;
-      margin: 20px 0;
-    }
-
-    p {
-      font-size: 1.2em;
-      color: #333;
-      margin: 10px;
-      animation: fadeInUp 2s ease-in-out;
-    }
-
-    .milestones {
-      margin: 40px auto;
-      max-width: 600px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      animation: fadeIn 3s ease-in-out;
-    }
-
+    /* Milestone Section */
     .milestone {
-      margin: 15px 0;
-      font-size: 1.1em;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #ec407a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8em;
+      margin: 0 auto 30px;
+      animation: pulse 2s infinite;
+    }
+
+    .milestone p {
+      font-size: 1.2em;
       color: #555;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 1.1em;
-      color: #fff;
-      background: #ec407a;
-      padding: 15px;
-      border-radius: 0 0 10px 10px;
-      animation: fadeIn 4s ease-in-out;
+    /* Memory Cloud Section */
+    .memories {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .memory {
+      background: #fff;
+      border-radius: 30px;
+      padding: 15px 25px;
+      font-size: 1em;
+      color: #444;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: floatUp 5s infinite ease-in-out;
     }
 
     /* Animations */
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
-    /* Floating hearts */
-    .heart {
-      position: fixed;
-      bottom: -10px;
-      font-size: 20px;
-      color: #e91e63;
-      animation: floatUp 6s infinite ease-in;
-      opacity: 0.7;
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);}
+      50% { transform: scale(1.1);}
     }
 
     @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 0.7; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+      0% { transform: translateY(0);}
+      50% { transform: translateY(-10px);}
+      100% { transform: translateY(0);}
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background: #ec407a;
+      color: white;
+      font-size: 1.1em;
+      border-radius: 15px 15px 0 0;
     }
   </style>
 </head>
 <body>
-  <h1>Happy 5 Months ❤️</h1>
-  <h2>Mervin & Nitis</h2>
-  <p>Every moment with you is special, but these 5 months have been magical ✨</p>
 
-  <div class="milestones">
-    <h2>🌸 Our Journey 🌸</h2>
-    <div class="milestone">💌 First Texts → Butterflies in the stomach</div>
-    <div class="milestone">😊 First Meet → Endless smiles</div>
-    <div class="milestone">💞 First Date → Pure happiness</div>
-    <div class="milestone">🌙 Late Night Talks → Closer than ever</div>
-    <div class="milestone">🎉 5 Months Strong → And forever to go ❤️</div>
+  <!-- Opening Scene -->
+  <div class="intro">
+    <h1>Mervin & Niti 💕</h1>
+  </div>
+
+  <!-- Milestone Section -->
+  <div class="milestone">
+    <div class="circle">5 Months</div>
+    <p>Five months of laughter, love, and countless memories ✨</p>
+  </div>
+
+  <!-- Memory Cloud -->
+  <div class="memories">
+    <h2>🌸 Our Cherishable Moments 🌸</h2>
+    <div class="cloud">
+      <div class="memory">💌 First Texts</div>
+      <div class="memory">😊 First Meet</div>
+      <div class="memory">💞 First Date</div>
+      <div class="memory">🌙 Late Night Talks</div>
+      <div class="memory">🎶 Our Songs</div>
+      <div class="memory">🍦 Ice Cream Nights</div>
+      <div class="memory">📸 Cute Selfies</div>
+      <div class="memory">🎉 5 Months Strong</div>
+    </div>
   </div>
 
   <footer>
-    Mervin ❤️ Nitis — Together Forever ✨
+    Forever Yours 💖 — Mervin & Niti
   </footer>
 
-  <!-- Floating hearts -->
-  <script>
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.className = "heart";
-      heart.innerHTML = "❤";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }
-    setInterval(createHeart, 500);
-  </script>
 </body>
 </html>
